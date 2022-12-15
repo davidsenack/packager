@@ -19,4 +19,3 @@ resource "aws_instance" "puppy-server" {
 output "puppy-server-ip" {
   value = "${aws_instance.puppy-server.public_ip}"
 }
-``
