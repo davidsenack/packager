@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "puppy-server" {
-  ami           = "ami-12345678"
+  ami           = "ami-0574da719dca65348"
   instance_type = "t2.micro"
 
   user_data = <<-EOF
