@@ -11,8 +11,8 @@ resource "aws_instance" "puppy-server" {
     apt-get update
     apt-get install -y golang
     export GOPATH=$HOME/go
-    go get github.com/your-username/packager
-    $GOPATH/bin/webserver
+    go get github.com/davidsenack/packager
+    $GOPATH/bin/packager
   EOF
 }
 
