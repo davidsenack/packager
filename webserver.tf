@@ -19,3 +19,15 @@ resource "aws_instance" "puppy-server" {
 output "puppy-server-ip" {
   value = "${aws_instance.puppy-server.public_ip}"
 }
+
+resource "aws_security_group" "puppy-server" {
+  name        = "puppy-server-sg"
+  description = "Security group for the puppy server"
+
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
