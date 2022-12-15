@@ -6,7 +6,7 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	http.ServeFile(w, r, "puppies.html")
+	http.ServeFile(w, r, "index.html")
 }
 
 func main() {
